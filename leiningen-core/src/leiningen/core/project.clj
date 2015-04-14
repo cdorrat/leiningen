@@ -879,6 +879,7 @@ Also merges default profiles."
      (-> (project-with-profiles (doto project
                                   (load-certificates)
                                   (init-lein-classpath)
+                                  (init-profiles default-profiles)
                                   (load-plugins)))
          (init-profiles default-profiles)
          (load-plugins)
